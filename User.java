@@ -29,7 +29,7 @@ public class User {
         this.id = ++numberOfUsers;
         this.name = (name != null) ? name : "";
         this.phone = (phone != null) ? phone : "";
-        this.email = (email != null) ? email : "teste";
+        this.email = (email != null) ? email : "";
     }
 
     /**
