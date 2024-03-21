@@ -7,4 +7,10 @@ public class PropertyTest {
     void testProperty() {
         assertTrue(true);
     }
+
+    @Test
+    void testToString(){
+        return ("Descricao       : " + description
+                + "\nPreco        : " + price);
+    }
 }

@@ -62,12 +62,6 @@ public class Property {
 
     }
 
-    @Test
-    public String testToString(){
-        return ("Descricao       : " + description
-                + "\nPreco        : " + price);
-    }
-
     @Override
     public String toString() {
         return ("Descricao       : " + description
