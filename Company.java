@@ -24,6 +24,11 @@ public class Company {
      * Constructor of class Company
      */
     public Company() {
+        clients = new ArrayList<User>();
+        sellers = new ArrayList<User>();
+        properties = new ArrayList<Property>();
+        sells = new ArrayList<Sell>();
+
         User client1 = new User("José Manuel", "911111111", "zemanel@yahoo.com");
         User client2 = new User("António Francisco", "92222222","tochico@hotmail.com");
         User seller1 = new User("Fernando Fernandes", "966777101", "fefe@remax.pt");
