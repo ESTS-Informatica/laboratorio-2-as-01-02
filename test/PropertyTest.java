@@ -12,7 +12,6 @@ public class PropertyTest {
 
     @Test
     void testToString(){
-        return ("Descricao       : " + description
-                + "\nPreco        : " + price);
+
     }
 }
