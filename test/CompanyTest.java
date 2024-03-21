@@ -26,6 +26,17 @@ class CompanyTest {
 
     @Test
     void testRegisterClients(){
-        //assertTrue(company.registerClient());
+        assertTrue(company.registerClient(company.getClients().get(0)));
+        assertTrue(company.registerClient(company.getClients().get(1)));
+    }
+
+    @Test
+    void testRegisterClientDuplicate(){
+        assertFalse(company.registerClient(company.getClients().get(0)) == company.registerClient(company.getClients().get(0)));
+    }
+
+    @Test
+    void testRegisterClientNull(){
+        assertFalse(company.registerClient(null));
     }
 }
