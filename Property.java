@@ -27,7 +27,7 @@ public class Property {
      * Id selector.
      */
     public int getId() {
-        
+        return this.id;
     }
 
     /**
