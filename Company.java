@@ -24,7 +24,13 @@ public class Company {
      * Constructor of class Company
      */
     public Company() {
+        User client1 = new User("José Manuel", "911111111", "zemanel@yahoo.com");
+        User client2 = new User("António Francisco", "92222222","tochico@hotmail.com");
+        User seller1 = new User("Fernando Fernandes", "966777101", "fefe@remax.pt");
+        User seller2 = new User("Rodrigo Rodrigues", "966777152", "roro@remax.pt");
 
+        clients.add(client1); clients.add(client2);
+        sellers.add(seller1); sellers.add(seller2);
     }
 
     /**
@@ -33,7 +39,7 @@ public class Company {
      * @return This company clients.
      */
     public List<User> getClients() {
-        return null;         // dummy implementation
+        return this.clients;
     }
 
     /**
@@ -42,7 +48,7 @@ public class Company {
      * @return This company sellers.
      */
     public List<User> getSellers() {
-        return null;         // dummy implementation
+        return this.sellers;
     }
 
     /**
@@ -51,7 +57,7 @@ public class Company {
      * @return This company's properties.
      */
     public List<Property> getProperties() {
-        return null;         // dummy implementation
+        return this.properties;
     }
 
     /**
@@ -60,7 +66,7 @@ public class Company {
      * @return This company sells.
      */
     public List<Sell> getSells() {
-        return null;         // dummy implementation
+        return this.sells;
     }
 
     /**
@@ -70,7 +76,11 @@ public class Company {
      * @return true If the registration succeeds, false otherwise.
      */
     public boolean registerClient(User client) {
-        return true;         // dummy implementation
+        if(client == null)
+            return false;
+
+        clients.add(client);
+        return true;
     }
 
     /**
@@ -80,6 +90,10 @@ public class Company {
      * @return true If the registration succeeds, false otherwise.
      */
     public boolean registerSeller(User seller) {
+        if (seller == null)
+            return false;
+
+        sellers.add(seller);
         return true;         // dummy implementation
     }
 
@@ -90,6 +104,10 @@ public class Company {
      * @return true If the registration succeeds, false otherwise.
      */
     public boolean registerProperty(Property property) {
+        if(property == null)
+            return false;
+
+        properties.add(property);
         return true;         // dummy implementation
     }
 
@@ -100,6 +118,10 @@ public class Company {
      * @return true If the registration succeeds, false otherwise.
      */
     public boolean registerSell(Sell sell) {
+        if(sell == null)
+            return false;
+
+        sells.add(sell);
         return true;         // dummy implementation
     }
 
@@ -112,7 +134,7 @@ public class Company {
      * @return true If the request succeeds, false otherwise.
      */
     public boolean createSell(User client, User seller, Property property) {
-        return true;         // dummy implementation
+        return true;
     }
 
     /**
