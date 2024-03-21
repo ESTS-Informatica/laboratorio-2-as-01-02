@@ -28,14 +28,6 @@ public class Company {
         sellers = new ArrayList<User>();
         properties = new ArrayList<Property>();
         sells = new ArrayList<Sell>();
-
-        User client1 = new User("José Manuel", "911111111", "zemanel@yahoo.com");
-        User client2 = new User("António Francisco", "92222222","tochico@hotmail.com");
-        User seller1 = new User("Fernando Fernandes", "966777101", "fefe@remax.pt");
-        User seller2 = new User("Rodrigo Rodrigues", "966777152", "roro@remax.pt");
-
-        clients.add(client1); clients.add(client2);
-        sellers.add(seller1); sellers.add(seller2);
     }
 
     /**
@@ -139,6 +131,12 @@ public class Company {
      * @return true If the request succeeds, false otherwise.
      */
     public boolean createSell(User client, User seller, Property property) {
+
+        if (client == null || seller == null || property == null)
+            return false;
+
+        Sell sell = new Sell(client, seller, property);
+        sells.add(sell);
         return true;
     }
 
@@ -149,7 +147,14 @@ public class Company {
      * @return The total number of sells in the year.
      */
     public int calculateSellsOfTheYear(int year) {
-        return 0;         // dummy implementation
+        int count = 0;
+        for (int i = 0; i<sells.size(); i++) {
+            if (sells.get(i).getDate().getYear() == year ){
+                count++;
+            }
+        }
+
+        return count;
     }
 
     /**
@@ -159,7 +164,22 @@ public class Company {
      * @return The name of the seller of the year.
      */
     public String findSellerOfTheYear(int year) {
-        return null;         // dummy implementation
+        int count = 0;
+        String bestSellerName = "";
+
+        for (int i = 0; i<sellers.size(); i++){
+            for (int z = 0; z<sells.size(); z++)
+            {
+                if (sells.get(i).getSeller() == sellers.get(z))
+                {
+
+
+                }
+
+            }
+        }
+
+        return bestSellerName;
     }
 
 }
