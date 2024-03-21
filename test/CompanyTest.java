@@ -18,4 +18,14 @@ class CompanyTest {
         assertNotNull(company.getSellers());
         assertNotNull(company.getClients());
     }
+
+    @Test
+    void testRegisterClient(){
+        assertTrue(company.registerClient(company.getClients().get(0)));
+    }
+
+    @Test
+    void testRegisterClients(){
+        //assertTrue(company.registerClient());
+    }
 }
