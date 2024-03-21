@@ -11,7 +11,7 @@ public class User {
     private static int numberOfUsers = 0;
     // The user id.
     private final int id;
-    // The user name.
+    // The user name;
     private String name;
     // The user phone.
     private String phone;
@@ -29,7 +29,7 @@ public class User {
         this.id = ++numberOfUsers;
         this.name = (name != null) ? name : "";
         this.phone = (phone != null) ? phone : "";
-        this.email = (email != null) ? email : "";
+        this.email = (email != null) ? email : "teste";
     }
 
     /**
