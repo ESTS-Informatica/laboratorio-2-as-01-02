@@ -165,7 +165,7 @@ public class Company {
      */
     public String findSellerOfTheYear(int year) {
         int count = 0;
-        String bestSellerName = "";
+        String bestSellerName = " ";
 
         for (int i = 0; i<sellers.size(); i++){
             for (int z = 0; z<sells.size(); z++)
